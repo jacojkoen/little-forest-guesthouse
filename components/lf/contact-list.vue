@@ -1,0 +1,27 @@
+<template>
+  <div :class="isExpanded ? 'columns-2' : ''">
+    <div>Betsie: <u-link to="tel:+27845038979">+27 84 503 8979</u-link></div>
+    <div>Brand: <u-link to="tel:+27836533322">+27 83 653 3322</u-link></div>
+    <div>
+      Email:
+      <u-link to="mailto:info@littleforestguesthouse.co.za" title="Contact us">
+        info@littleforestguesthouse.co.za
+      </u-link>
+    </div>
+    <div>
+      Address:
+      <a
+        href="https://www.google.com/maps/place/Little+Forest+Guesthouse/@-26.14389,28.01831,15z/data=!4m8!3m7!1s0x0:0x1cbf814ede619475!5m2!4m1!1i2!8m2!3d-26.14389!4d28.01831"
+        target="_blank"
+        rel="noopener"
+      >
+        41, Fifth Street, Parkhurst, Johannesburg, South Africa
+      </a>
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+defineProps<{
+  isExpanded?: boolean
+}>()
+</script>

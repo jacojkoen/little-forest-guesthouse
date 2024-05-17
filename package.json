@@ -4,14 +4,24 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --port=4100",
+    "lint": "eslint --cache --ext \".js,.vue,.ts\" --ignore-path .gitignore .",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/ui": "^2.16.0",
-    "nuxt": "^3.11.2"
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "nuxt": "^3.11.2",
+    "prettier": "^3.2.5",
+    "sass": "^1.77.2"
+  },
+  "dependencies": {
+    "@iconify-json/ion": "^1.1.18"
   }
 }
