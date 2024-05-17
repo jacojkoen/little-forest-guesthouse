@@ -1,5 +1,5 @@
 <template>
-  <header class="header-area">
+  <header class="header-area font-light">
     <UContainer>
       <UButton
         icon="i-ion-home"
@@ -32,7 +32,7 @@
     </UContainer>
   </header>
 
-  <div class="body-area">
+  <div class="body-area font-light">
     <main class="page-area">
       <NuxtPage />
     </main>
@@ -45,21 +45,20 @@
           class="mr-2"
           title="View on maps"
         >
-          <!-- <u-icon name="i-heroicons-map-pin" />  -->
+          <lf-icon name="ios-location" />
           41, Fifth Street, Parkhurst, Johannesburg, South Africa
         </u-link>
         <u-link class="mr-2" title="Phone us" to="tel:+27845038979">
-          <!-- <u-icon name="i-heroicons-phone" />  -->
+          <lf-icon name="ios-phone-portrait" />
           +27 84 503 8979
         </u-link>
         <u-link
           color="primary"
           variant="solid"
-          to="https://book.nightsbridge.com/25431"
+          :to="bookLink"
           title="Make a booking"
         >
-          <!-- <u-icon name="i-heroicons-home-modern"></u-icon> -->
-          Book now
+          <lf-icon name="arrow-forward-circle-outline"></lf-icon> Book now
         </u-link>
       </UContainer>
     </div>
@@ -98,7 +97,7 @@ const links = [
   {
     label: 'Book now',
     icon: 'i-ion-arrow-forward-circle-outline',
-    to: 'https://book.nightsbridge.com/25431',
+    to: bookLink,
   },
 ]
 </script>
@@ -122,8 +121,6 @@ const links = [
 .footer-area {
   font-size: 0.75rem;
   height: 2rem;
-  display: flex;
-  align-items: center;
   background: #1fa67a;
   display: flex;
   align-items: center;

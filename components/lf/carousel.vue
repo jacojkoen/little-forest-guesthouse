@@ -47,11 +47,12 @@ onMounted(() => {
     font-size: 1.5rem;
     padding: 1rem;
     display: inline-block;
+    font-weight: 300;
   }
   p {
     padding: 1rem;
     background: rgba(0, 0, 0, 0.5);
-    font-weight: 500;
+    font-weight: 300;
   }
 }
 </style>

@@ -2,7 +2,9 @@
   <UButton
     color="primary"
     variant="solid"
-    to="https://book.nightsbridge.com/25431"
-    >Book now</UButton
+    :to="bookLink"
+    icon="i-ion-arrow-forward-circle-outline"
   >
+    Book now
+  </UButton>
 </template>

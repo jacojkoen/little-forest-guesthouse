@@ -15,9 +15,7 @@
         Gautrain station, some choose it as the perfect accommodation for
         business trips or breakaways.
       </p>
-      <div>
-        <lf-carousel :images="aboutImages"></lf-carousel>
-      </div>
+
       <p>
         But Little Forest Guest House is more than just conveniently located,
         it’s a peaceful oasis in the heart of Johannesburg. Visitors always
@@ -39,14 +37,23 @@
       </p>
       <p>Free WiFi for all guests served from a high speed fiber connection.</p>
       <lf-book-btn></lf-book-btn>
+      <lf-carousel :images="aboutImages"></lf-carousel>
+      <div class="mt-6 mb-4">
+        <lf-icon name="bed-outline"></lf-icon>
+        <lf-rooms-list></lf-rooms-list>
+      </div>
     </div>
-    <lf-widgets></lf-widgets>
+    <lf-widgets hide-rooms hide-features></lf-widgets>
   </lf-content>
 </template>
 
 <script setup lang="ts">
 const aboutImages = [
-  'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-Main-House.jpg',
-  'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Butterflies.jpg',
+  {
+    img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-Main-House.jpg',
+  },
+  {
+    img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Butterflies.jpg',
+  },
 ]
 </script>

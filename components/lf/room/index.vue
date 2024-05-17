@@ -14,9 +14,9 @@
     </template>
 
     <div>
-      <u-link v-if="!hideLink && !hideBanner" :to="room.link"
-        ><img :src="room.banner" :alt="room.name"
-      /></u-link>
+      <u-link v-if="!hideLink && !hideBanner" :to="room.link">
+        <img :src="room.banner" :alt="room.name" />
+      </u-link>
       <img v-else-if="!hideBanner" :src="room.banner" :alt="room.name" />
       <UCarousel
         v-if="room.gallery && !hideGallery"
@@ -38,7 +38,7 @@
           draggable="false"
         />
       </UCarousel>
-      <div class="my-2 text-lg">
+      <div class="my-2">
         {{ room.description }}
       </div>
       <ul>
@@ -55,8 +55,10 @@
           color="primary"
           variant="solid"
           :to="room.link"
-          >View room</UButton
+          icon="i-ion-leaf-outline"
         >
+          View room
+        </UButton>
         <lf-book-btn></lf-book-btn>
       </div>
     </template>

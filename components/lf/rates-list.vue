@@ -11,12 +11,9 @@
       >
       <div>
         <small class="mr-1">from</small>
-        <u-link
-          title="Book now"
-          to="https://book.nightsbridge.com/25431"
-          target="new"
-          >{{ numberFormatter.formatCurrency(room.price) }}</u-link
-        >
+        <u-link title="Book now" :to="bookLink" target="new">{{
+          numberFormatter.formatCurrency(room.price)
+        }}</u-link>
         <small class="ml-1">per single per night</small>
       </div>
     </li>
