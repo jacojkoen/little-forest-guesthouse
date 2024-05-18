@@ -50,20 +50,7 @@ const homeGallery: IGalleryItem[] = [
   <div class="gallery">
     <lf-carousel :images="homeGallery"></lf-carousel>
   </div>
-  <section class="pt-8 pb-4 description-area">
-    <u-container class="flex justify-between">
-      <div>
-        <h2 class="text-lg">
-          A peaceful oasis in the heart of Parkhurst, Johannesburg
-        </h2>
-        <p>
-          Little Forest Guest House offers upmarket guest house accommodation in
-          the heart of one of Johannesburg’s most beautiful suburbs, Parkhurst.
-        </p>
-      </div>
-      <lf-book-btn></lf-book-btn>
-    </u-container>
-  </section>
+  <lf-intro-content></lf-intro-content>
   <u-container>
     <div class="grid grid-cols-2 grid-rows-1 gap-4 mt-4">
       <lf-room
@@ -87,32 +74,15 @@ const homeGallery: IGalleryItem[] = [
             Rosebank and Sandton, and it’s closeness to the Gautrain station, it
             is perfect for business trips or breakaways.
           </p>
+          <h3 class="text-lg mb-2 mt-4">Our rates</h3>
           <lf-rates-list></lf-rates-list>
+          <h3 class="text-lg mb-2 mt-4">Our rooms</h3>
+          <lf-rooms-list is-thumbnail-view></lf-rooms-list>
         </div>
       </UCard>
     </div>
-
-    <!-- <section class="mt-4">
-      <h3 class="text-xl mb-2">Little Forest Guest House</h3>
-      <UDivider class="mb-4" />
-      <p class="mb-2">
-        Located on 41 5th Street, our guesthouse is a short walk away from
-        Fourth Avenue, Parkhurst’s bustling street of restaurants, cafes, and
-        boutiques.
-      </p>
-      <p class="mb-2">
-        Due to its proximity to Johannesburg’s major hubs, including Rosebank
-        and Sandton, and it’s closeness to the Gautrain station, it is perfect
-        for business trips or breakaways.
-      </p>
-    </section> -->
     <section class="mt-8">
       <lf-widgets :hide-rooms="true" :hide-rates="true"></lf-widgets>
     </section>
   </u-container>
 </template>
-<style lang="scss" scoped>
-.description-area {
-  // background: #1fa67a;
-}
-</style>

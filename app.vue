@@ -21,12 +21,12 @@
           @click="isOpen = false"
         />
         <UVerticalNavigation
-          :links="links"
+          :links="pageNavigation"
           class="border-b border-gray-200 dark:border-gray-800"
         />
       </USlideover>
       <UHorizontalNavigation
-        :links="links"
+        :links="pageNavigation"
         class="md:visible border-b border-gray-200 dark:border-gray-800 hidden lg:block"
       />
     </UContainer>
@@ -36,6 +36,9 @@
     <main class="page-area">
       <NuxtPage />
     </main>
+    <u-container class="mb-2">
+      <UHorizontalNavigation :links="pageNavigation" />
+    </u-container>
     <div class="footer-area">
       <UContainer>
         <span class="mr-2">© Little Forest Guest House</span>
@@ -67,39 +70,6 @@
 
 <script setup lang="ts">
 const isOpen = ref(false)
-// Navigation
-const links = [
-  {
-    label: 'Home',
-    icon: 'i-ion-leaf-outline',
-    to: '/',
-  },
-  {
-    label: 'Accommodation',
-    icon: 'i-ion-bed-outline',
-    to: '/accommodation',
-  },
-  {
-    label: 'About',
-    icon: 'i-ion-book-outline',
-    to: '/about',
-  },
-  {
-    label: 'Rates',
-    icon: 'i-ion-information-circle-outline',
-    to: '/rates',
-  },
-  {
-    label: 'Contact',
-    icon: 'i-ion-location-outline',
-    to: '/contact',
-  },
-  {
-    label: 'Book now',
-    icon: 'i-ion-arrow-forward-circle-outline',
-    to: bookLink,
-  },
-]
 </script>
 
 <style lang="scss">
@@ -116,12 +86,12 @@ const links = [
   }
 }
 .page-area {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .footer-area {
   font-size: 0.75rem;
   height: 2rem;
-  background: #1fa67a;
+  border-top: 1px solid #1fa67a;
   display: flex;
   align-items: center;
 }
@@ -130,5 +100,15 @@ const links = [
   flex-direction: column;
   justify-content: space-between;
   min-height: calc(100vh - 50px);
+}
+a {
+  color: #1fa67a;
+  transition: all 0.25s ease-in;
+  &:hover {
+    color: #2ce2a5;
+  }
+}
+p {
+  margin-bottom: 1rem;
 }
 </style>

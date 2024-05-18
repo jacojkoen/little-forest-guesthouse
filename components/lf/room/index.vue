@@ -1,9 +1,13 @@
 <template>
-  <UCard>
-    <template #header>
+  <div
+    class="display-area rounded-lg divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900"
+  >
+    <div class="display-header py-4 px-6">
       <div class="h-12">
         <h3 class="text-lg">
-          <u-link :to="room.link">{{ room.name }}</u-link>
+          <u-link :to="room.link" class="text-primary"
+            >{{ room.name }} <lf-icon name="leaf-outline ml-2"></lf-icon
+          ></u-link>
         </h3>
         <div>
           <span class="text-sm">From</span>
@@ -11,11 +15,10 @@
           <span class="text-sm">per single per night</span>
         </div>
       </div>
-    </template>
-
-    <div>
+    </div>
+    <div class="display-image">
       <u-link v-if="!hideLink && !hideBanner" :to="room.link">
-        <img :src="room.banner" :alt="room.name" />
+        <img width="100%" :src="room.banner" :alt="room.name" />
       </u-link>
       <img v-else-if="!hideBanner" :src="room.banner" :alt="room.name" />
       <UCarousel
@@ -38,6 +41,8 @@
           draggable="false"
         />
       </UCarousel>
+    </div>
+    <div class="display-body py-4 px-6">
       <div class="my-2">
         {{ room.description }}
       </div>
@@ -48,7 +53,7 @@
       </ul>
     </div>
 
-    <template #footer>
+    <div class="display-footer py-4 px-6">
       <div class="flex justify-between items-center h8">
         <UButton
           v-if="!hideLink"
@@ -61,8 +66,8 @@
         </UButton>
         <lf-book-btn></lf-book-btn>
       </div>
-    </template>
-  </UCard>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">

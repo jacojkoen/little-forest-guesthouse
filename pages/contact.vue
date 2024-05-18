@@ -11,6 +11,7 @@
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
       title="Little Forest Guest House Location"
+      class="mb-8"
     ></iframe>
   </div>
 </template>
