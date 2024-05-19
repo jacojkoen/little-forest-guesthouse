@@ -28,8 +28,8 @@ onMounted(() => {
   >
     <div>
       <div v-if="item.title || item.text" class="slide-text">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.text }}</p>
+        <h3 v-if="item.title">{{ item.title }}</h3>
+        <p v-if="item.text">{{ item.text }}</p>
       </div>
       <img :src="item.img" :alt="item.title || item.img" draggable="false" />
     </div>
@@ -38,10 +38,11 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .slide-text {
-  margin-bottom: -220px;
-  position: relative;
+  position: absolute;
   z-index: 999;
-  margin-top: 6rem;
+  display: inline-block;
+  top: 6rem;
+  width: 33%;
   h3 {
     background: rgba(31, 166, 122, 0.7);
     font-size: 1.5rem;

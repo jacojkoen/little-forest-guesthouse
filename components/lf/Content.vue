@@ -11,6 +11,6 @@ defineProps<{
 </script>
 <style lang="scss">
 .content-area {
-  margin-top: 4.5rem;
+  margin-top: 1.5rem;
 }
 </style>

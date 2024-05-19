@@ -6,17 +6,27 @@
       <div class="h-12">
         <h3 class="text-lg">
           <u-link :to="room.link" class="text-primary"
-            >{{ room.name }} <lf-icon name="leaf-outline ml-2"></lf-icon
-          ></u-link>
+            >{{ room.name }}
+            <lf-icon name="ion:leaf-outline" class="ml-2"></lf-icon>
+          </u-link>
         </h3>
-        <div>
-          <span class="text-sm">From</span>
-          {{ numberFormatter.formatCurrency(room.price) }}
-          <span class="text-sm">per single per night</span>
+        <div class="flex justify-between">
+          <div>
+            <span class="text-sm">From</span>
+            {{ numberFormatter.formatCurrency(room.price) }}
+            <span class="text-sm">per single per night</span>
+          </div>
+          <div class="flex items-center">
+            <UTooltip :text="`Sleeps 1 to ${room.capacity} persons`">
+              <lf-icon name="ion:person" class="mr-2"></lf-icon>
+              1 - {{ room.capacity }}
+            </UTooltip>
+            <lf-book-btn v-if="showHeaderBook" class="ml-2"></lf-book-btn>
+          </div>
         </div>
       </div>
     </div>
-    <div class="display-image">
+    <div class="display-image" :class="showHeaderBook ? 'mt-3' : ''">
       <u-link v-if="!hideLink && !hideBanner" :to="room.link">
         <img width="100%" :src="room.banner" :alt="room.name" />
       </u-link>
@@ -45,9 +55,15 @@
     <div class="display-body py-4 px-6">
       <div class="my-2">
         {{ room.description }}
+        <u-link v-if="hideFeatures" :to="room.link">
+          <lf-icon
+            name="arrow-forward-circle-outline"
+            title="Read more"
+          ></lf-icon>
+        </u-link>
       </div>
-      <ul>
-        <li class="mb-2" v-for="feature in room.features">
+      <ul v-if="!hideFeatures" class="md:columns-2 list-disc">
+        <li class="mb-2 ml-4" v-for="feature in room.features">
           {{ feature }}
         </li>
       </ul>
@@ -78,6 +94,8 @@ const props = defineProps<{
   hideGallery?: boolean
   hideBanner?: boolean
   hideLink?: boolean
+  hideFeatures?: boolean
+  showHeaderBook?: boolean
 }>()
 
 const carouselRef = ref()

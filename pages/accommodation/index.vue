@@ -9,7 +9,7 @@ const { rooms } = useRooms()
         v-for="room in rooms"
         class="mt-4"
         :room="room"
-        :hide-gallery="true"
+        hide-banner
       ></lf-room>
       <UCard class="mt-4">
         <template #header>

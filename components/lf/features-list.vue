@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li v-for="feature in features">
+  <ul class="list-disc">
+    <li class="ml-4" v-for="feature in features">
       <span>{{ feature }}</span>
     </li>
   </ul>

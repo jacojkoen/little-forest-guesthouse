@@ -48,11 +48,9 @@
           class="mr-2"
           title="View on maps"
         >
-          <lf-icon name="ios-location" />
           41, Fifth Street, Parkhurst, Johannesburg, South Africa
         </u-link>
         <u-link class="mr-2" title="Phone us" to="tel:+27845038979">
-          <lf-icon name="ios-phone-portrait" />
           +27 84 503 8979
         </u-link>
         <u-link
@@ -61,7 +59,7 @@
           :to="bookLink"
           title="Make a booking"
         >
-          <lf-icon name="arrow-forward-circle-outline"></lf-icon> Book now
+          Book now <lf-icon name="ion:arrow-forward-circle-outline"></lf-icon>
         </u-link>
       </UContainer>
     </div>
@@ -74,10 +72,10 @@ const isOpen = ref(false)
 
 <style lang="scss">
 .header-area {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 999;
+  // position: fixed;
+  // width: 100%;
+  // top: 0;
+  // z-index: 999;
   height: 3rem;
   background: rgba(0, 0, 0, 0.8);
   transition: all 0.25s ease-in;
