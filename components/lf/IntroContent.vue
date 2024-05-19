@@ -2,12 +2,11 @@
   <section class="pt-6 pb-2 description-area">
     <u-container class="flex justify-between">
       <div class="w-2/3 ml-6">
-        <h2 class="text-lg mb-2">
-          A peaceful oasis in the heart of Parkhurst, Johannesburg
-        </h2>
+        <h2 class="text-lg mb-2">Little Forest Guest House</h2>
         <p>
-          Little Forest Guest House offers upmarket guest house accommodation in
-          the heart of one of Johannesburg’s most beautiful suburbs, Parkhurst.
+          A peaceful oasis in the heart of Parkhurst, Johannesburg. We offer
+          upmarket guest house accommodation and welcome you to a tranquil,
+          comfortable stay in beautiful surroundings.
           <u-link to="/about"
             ><lf-icon
               name="arrow-forward-circle-outline"

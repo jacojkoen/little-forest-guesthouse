@@ -3,7 +3,7 @@ export interface IRoom {
   capacity: number
   description: string
   features: string[]
-  gallery?: string[]
+  gallery?: IGalleryItem[]
   link: string
   name: string
   price: number

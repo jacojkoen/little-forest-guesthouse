@@ -87,7 +87,7 @@ const homeGallery: IGalleryItem[] = [
       </UCard>
     </div>
     <section class="mt-8">
-      <lf-widgets :hide-rooms="true" :hide-rates="true"></lf-widgets>
+      <lf-widgets hide-rooms hide-rates></lf-widgets>
     </section>
   </u-container>
 </template>

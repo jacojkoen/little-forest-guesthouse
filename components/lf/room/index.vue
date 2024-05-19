@@ -1,8 +1,9 @@
 <template>
-  <div
-    class="display-area rounded-lg divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900"
-  >
-    <div class="display-header py-4 px-6">
+  <div :class="style">
+    <div
+      class="display-header py-4 px-6"
+      :class="isPage ? containerStyles : ''"
+    >
       <div class="h-12">
         <h3 class="text-lg">
           <u-link :to="room.link" class="text-primary"
@@ -31,28 +32,13 @@
         <img width="100%" :src="room.banner" :alt="room.name" />
       </u-link>
       <img v-else-if="!hideBanner" :src="room.banner" :alt="room.name" />
-      <UCarousel
+      <lf-carousel
         v-if="room.gallery && !hideGallery"
-        ref="carouselRef"
-        v-slot="{ item }"
-        :items="room.gallery"
-        :ui="{ item: 'basis-full' }"
-        indicators
-      >
-        <img
-          :src="item"
-          :alt="
-            item.replace(
-              'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/',
-              '',
-            )
-          "
-          class="w-full"
-          draggable="false"
-        />
-      </UCarousel>
+        :images="room.gallery"
+        :full-image="!isPage"
+      ></lf-carousel>
     </div>
-    <div class="display-body py-4 px-6">
+    <div class="display-body py-4 px-6" :class="isPage ? containerStyles : ''">
       <div class="my-2">
         {{ room.description }}
         <u-link v-if="hideFeatures" :to="room.link">
@@ -69,7 +55,10 @@
       </ul>
     </div>
 
-    <div class="display-footer py-4 px-6">
+    <div
+      class="display-footer py-4 px-6"
+      :class="isPage ? containerStyles : ''"
+    >
       <div class="flex justify-between items-center h8">
         <UButton
           v-if="!hideLink"
@@ -96,7 +85,14 @@ const props = defineProps<{
   hideLink?: boolean
   hideFeatures?: boolean
   showHeaderBook?: boolean
+  isPage?: boolean
 }>()
 
-const carouselRef = ref()
+const containerStyles = 'mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mt-4'
+
+const style = computed(() =>
+  props.isPage
+    ? ''
+    : 'display-area rounded-lg divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900',
+)
 </script>

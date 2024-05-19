@@ -1,27 +1,36 @@
 <script setup lang="ts">
 const { rooms } = useRooms()
+
+const roomGallery = computed(() => {
+  let roomPics: IGalleryItem = []
+  Object.values(rooms.value).forEach((room) => {
+    if (room.gallery) {
+      roomPics = [...roomPics, ...room.gallery]
+    }
+  })
+  return roomPics
+})
 </script>
 
 <template>
   <lf-content title="Accommodation">
     <div class="grid grid-cols-2 grid-rows-1 gap-4">
-      <lf-room
-        v-for="room in rooms"
-        class="mt-4"
-        :room="room"
-        hide-banner
-      ></lf-room>
-      <UCard class="mt-4">
+      <lf-room v-for="room in rooms" :room="room" hide-banner></lf-room>
+      <UCard>
         <template #header>
-          <div class="h-12">
-            <h3 class="text-lg">Rates</h3>
-            <div>We also serve breakfast on request</div>
+          <div class="h-10">
+            <h3 class="text-lg">Features and services</h3>
           </div>
         </template>
-
-        <lf-rates-list></lf-rates-list>
+        <lf-features-list></lf-features-list>
+        <lf-carousel
+          class="mt-6"
+          full-image
+          :images="roomGallery"
+        ></lf-carousel>
+        <lf-rooms-list></lf-rooms-list>
       </UCard>
     </div>
-    <lf-widgets :hide-rooms="true" :hide-rates="true"></lf-widgets>
+    <lf-widgets hide-rooms hide-rates></lf-widgets>
   </lf-content>
 </template>

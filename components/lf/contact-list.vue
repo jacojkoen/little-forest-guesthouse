@@ -12,17 +12,17 @@
       </a>
     </div>
     <div class="mb-3">
-      <lf-icon name="ios-email-outline" class="text-lg"></lf-icon>
+      <lf-icon name="ion:ios-email-outline" class="text-lg"></lf-icon>
       <u-link to="mailto:info@littleforestguesthouse.co.za" title="Email us">
         info@littleforestguesthouse.co.za
       </u-link>
     </div>
     <div class="mb-3">
-      <lf-icon name="ios-phone-portrait" class="text-lg"></lf-icon>
+      <lf-icon name="ion:ios-phone-portrait" class="text-lg"></lf-icon>
       <u-link to="tel:+27845038979" title="Call Betsie">+27 84 503 8979</u-link>
     </div>
     <div class="mb-3">
-      <lf-icon name="ios-phone-portrait" class="text-lg"></lf-icon>
+      <lf-icon name="ion:ios-phone-portrait" class="text-lg"></lf-icon>
       <u-link to="tel:+27836533322" title="Call Brand">+27 83 653 3322</u-link>
     </div>
   </div>

@@ -1,5 +1,9 @@
 <template>
-  <div :class="isThumbnailView ? 'md:grid md:grid-cols-5 md:gap-3' : ''">
+  <div
+    :class="
+      isThumbnailView ? 'md:grid md:grid-cols-5 md:gap-3' : 'flex text-sm'
+    "
+  >
     <u-link
       v-for="room in rooms"
       :to="room.link"

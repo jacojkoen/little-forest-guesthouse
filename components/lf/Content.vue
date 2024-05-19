@@ -1,6 +1,9 @@
 <template>
   <u-container class="content-area">
-    <h2 v-if="title" class="text-xl mb-4">{{ title }}</h2>
+    <div class="flex items-center justify-between mb-6">
+      <h2 v-if="title" class="text-xl">{{ title }}</h2>
+      <lf-book-btn></lf-book-btn>
+    </div>
     <slot></slot>
   </u-container>
 </template>

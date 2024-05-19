@@ -8,11 +8,21 @@ export const useRooms = () => {
       banner:
         'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Zanzibar-Garden-Suite.jpg',
       gallery: [
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-98.jpg',
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-105.jpg',
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-108.jpg',
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-109.jpg',
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-111.jpg',
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-98.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-105.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-108.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-109.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-111.jpg',
+        },
       ],
       price: rates.pricePremium.value,
       capacity: 2,
@@ -40,8 +50,27 @@ export const useRooms = () => {
       price: rates.pricePremium.value,
       capacity: 2,
       gallery: [
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-80.jpg',
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Mali-Bathroom-752x450_c.jpg',
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-80.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Mali-Bathroom-752x450_c.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-82.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-85.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-02.27.24-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-59.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-02.27.25-752x450_c.jpeg',
+        },
       ],
       link: '/accommodation/mali-garden-suite',
       description:
@@ -67,8 +96,34 @@ export const useRooms = () => {
       price: rates.pricePool.value,
       capacity: 4,
       gallery: [
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-117.jpg',
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-119.jpg',
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-117.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-119.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-136.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-137.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-138.jpg',
+        },
+
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-146.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-157.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-02.35.59-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-02.33.54-752x450_c.jpeg',
+        },
       ],
       link: '/accommodation/the-pool-cottage',
       description:
@@ -97,8 +152,27 @@ export const useRooms = () => {
       price: rates.priceCopper.value,
       capacity: 4,
       gallery: [
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/copper.png',
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-05-at-21.20.23-1-752x450_c.jpeg',
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/copper.png',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-05-at-21.20.22-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-05-at-21.20.26-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-05-at-21.20.23-1-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-05-at-21.20.23-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-05-at-21.18.44-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-05-at-21.20.25-1-752x450_c.jpeg',
+        },
       ],
       link: '/accommodation/copper-house',
       description:
@@ -125,8 +199,24 @@ export const useRooms = () => {
       price: rates.priceGiraffe.value,
       capacity: 3,
       gallery: [
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/giraffe.png',
-        'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-11.20.24-752x450_c.jpeg',
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/giraffe.png',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-11.20.24-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-11.20.24-1-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-11.20.26-752x450_c.jpeg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Giraffe-Bathroom-752x450_c.jpg',
+        },
+        {
+          img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Giraffe-Bathroom-2-752x450_c.jpg',
+        },
       ],
       link: '/accommodation/giraffe-garden-suite',
       description: 'Spacious unit with a balcony overlooking the garden.',

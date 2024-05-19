@@ -1,6 +1,6 @@
 <template>
   <lf-content title="About">
-    <div class="md:grid md:grid-cols-2">
+    <div class="md:grid md:grid-cols-2 gap-4">
       <section class="mb-8">
         <p>
           Little Forest Guest House is an upmarket Guest House set in the heart
@@ -30,7 +30,11 @@
         <lf-book-btn class="mt-2"></lf-book-btn>
       </section>
       <aside>
-        <lf-carousel :images="aboutImages" class="mb-4"></lf-carousel>
+        <lf-carousel
+          :images="aboutImages"
+          full-image
+          class="mb-4"
+        ></lf-carousel>
       </aside>
     </div>
     <div>

@@ -1,39 +1,60 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   images: IGalleryItem[]
+  fullImage?: boolean
+  autoPlay?: boolean
 }>()
 
 const carouselRef = ref()
 
+const fullScreenMode = ref(false)
+
+const imageSpecs = computed(() => {
+  return fullScreenMode.value || props.fullImage
+    ? 'basis-full'
+    : 'basis-full md:basis-1/2 lg:basis-1/3'
+})
+
 onMounted(() => {
-  setInterval(() => {
-    if (!carouselRef.value) return
+  if (props.autoPlay) {
+    setInterval(() => {
+      if (!carouselRef.value) return
 
-    if (carouselRef.value.page === carouselRef.value.pages) {
-      return carouselRef.value.select(0)
-    }
+      if (carouselRef.value.page === carouselRef.value.pages) {
+        return carouselRef.value.select(0)
+      }
 
-    carouselRef.value.next()
-  }, 4000)
+      carouselRef.value.next()
+    }, 4000)
+  }
 })
 </script>
 
 <template>
-  <UCarousel
-    ref="carouselRef"
-    v-slot="{ item, index }"
-    :items="images"
-    :ui="{ item: 'w-full' }"
-    indicators
-  >
-    <div>
-      <div v-if="item.title || item.text" class="slide-text">
+  <div :class="fullScreenMode ? 'fullscreen-mode' : ''">
+    <UCarousel
+      ref="carouselRef"
+      v-slot="{ item, index }"
+      :items="images"
+      :ui="{ item: imageSpecs }"
+      :arrows="images.length > 3"
+    >
+      <u-button
+        v-if="fullScreenMode"
+        icon="i-ion-close"
+        @click="fullScreenMode = false"
+        class="close-btn"
+        variant="ghost"
+      ></u-button>
+      <div @click="fullScreenMode = !fullScreenMode" class="image-area">
+        <!-- <div v-if="item.title || item.text" class="slide-text">
         <h3 v-if="item.title">{{ item.title }}</h3>
         <p v-if="item.text">{{ item.text }}</p>
+      </div> -->
+        <img :src="item.img" :alt="item.title || item.img" draggable="false" />
       </div>
-      <img :src="item.img" :alt="item.title || item.img" draggable="false" />
-    </div>
-  </UCarousel>
+    </UCarousel>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -55,5 +76,26 @@ onMounted(() => {
     background: rgba(0, 0, 0, 0.5);
     font-weight: 300;
   }
+}
+.fullscreen-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-area {
+  cursor: pointer;
+}
+.close-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 }
 </style>
