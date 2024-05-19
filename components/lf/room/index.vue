@@ -4,24 +4,26 @@
       class="display-header py-4 px-6"
       :class="isPage ? containerStyles : ''"
     >
-      <div class="h-12">
+      <div class="md:h-12">
         <h3 class="text-lg">
           <u-link :to="room.link" class="text-primary"
             >{{ room.name }}
             <lf-icon name="ion:leaf-outline" class="ml-2"></lf-icon>
           </u-link>
         </h3>
-        <div class="flex justify-between">
+        <div class="md:flex justify-between items-center">
           <div>
             <span class="text-sm">From</span>
             {{ numberFormatter.formatCurrency(room.price) }}
             <span class="text-sm">per single per night</span>
           </div>
-          <div class="flex items-center">
-            <UTooltip :text="`Sleeps 1 to ${room.capacity} persons`">
-              <lf-icon name="ion:person" class="mr-2"></lf-icon>
-              1 - {{ room.capacity }}
-            </UTooltip>
+          <div class="lg:flex items-center md:visible hidden">
+            <div>
+              <UTooltip :text="`Sleeps 1 to ${room.capacity} persons`">
+                <lf-icon name="ion:person" class="mr-2"></lf-icon>
+                1 - {{ room.capacity }}
+              </UTooltip>
+            </div>
             <lf-book-btn v-if="showHeaderBook" class="ml-2"></lf-book-btn>
           </div>
         </div>

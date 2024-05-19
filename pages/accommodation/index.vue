@@ -2,7 +2,7 @@
 const { rooms } = useRooms()
 
 const roomGallery = computed(() => {
-  let roomPics: IGalleryItem = []
+  let roomPics: IGalleryItem[] = []
   Object.values(rooms.value).forEach((room) => {
     if (room.gallery) {
       roomPics = [...roomPics, ...room.gallery]
@@ -14,7 +14,7 @@ const roomGallery = computed(() => {
 
 <template>
   <lf-content title="Accommodation">
-    <div class="grid grid-cols-2 grid-rows-1 gap-4">
+    <div class="grid md:grid-cols-2 md:grid-rows-1 gap-4">
       <lf-room v-for="room in rooms" :room="room" hide-banner></lf-room>
       <UCard>
         <template #header>

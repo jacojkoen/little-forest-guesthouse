@@ -1,5 +1,5 @@
 <template>
-  <div :class="isExpanded ? 'columns-2' : ''">
+  <div :class="isExpanded ? 'md:columns-2' : ''">
     <div class="mb-3">
       <lf-icon name="ion:location-sharp" class="text-lg"></lf-icon>
       <a

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 grid-rows-1 gap-4 mt-8">
+  <div class="grid md:grid-cols-2 md:grid-rows-1 gap-4 mt-8">
     <UCard v-if="!hideFeatures">
       <template #header>
         <h3 class="text-lg h-8">Features and services</h3>

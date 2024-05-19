@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --port=4100",
+    "dev": "nuxt dev --port=4100 --host",
     "lint": "eslint --cache --ext \".js,.vue,.ts\" --ignore-path .gitignore .",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

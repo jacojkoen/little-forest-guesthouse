@@ -27,7 +27,6 @@
           Entering the property feels like stepping away from the city, which is
           why many visitors use it as a perfect weekend or holiday breakaway.
         </p>
-        <lf-book-btn class="mt-2"></lf-book-btn>
       </section>
       <aside>
         <lf-carousel
