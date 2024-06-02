@@ -25,7 +25,7 @@ const route = useRoute()
     class="p-2 flex justify-between items-center 2xl:hidden xl:hidden lg:hidden md:hidden sm:visible room-footer border-t border-gray-200 dark:border-gray-800"
   >
     <UTooltip :text="`Sleeps 1 to ${2} persons`">
-      <lf-icon name="ion:person" class="mr-2"></lf-icon>
+      <lf-icon name="i-ion-person" class="mr-2"></lf-icon>
       1 - {{ 2 }}
     </UTooltip>
 

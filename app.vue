@@ -74,7 +74,7 @@
           :to="bookLink"
           title="Make a booking"
         >
-          Book now <lf-icon name="ion:arrow-forward-circle-outline"></lf-icon>
+          Book now <lf-icon name="i-ion-arrow-forward-circle-outline"></lf-icon>
         </u-link>
       </UContainer>
     </div>

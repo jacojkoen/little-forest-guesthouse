@@ -8,7 +8,7 @@
         <h3 class="text-lg">
           <u-link :to="room.link" class="text-primary"
             >{{ room.name }}
-            <lf-icon name="ion:leaf-outline" class="ml-2"></lf-icon>
+            <lf-icon name="i-ion-leaf-outline" class="ml-2"></lf-icon>
           </u-link>
         </h3>
         <div class="md:flex justify-between items-center">
@@ -20,7 +20,7 @@
           <div class="lg:flex items-center md:visible hidden">
             <div>
               <UTooltip :text="`Sleeps 1 to ${room.capacity} persons`">
-                <lf-icon name="ion:person" class="mr-2"></lf-icon>
+                <lf-icon name="i-ion-person" class="mr-2"></lf-icon>
                 1 - {{ room.capacity }}
               </UTooltip>
             </div>
