@@ -30,7 +30,7 @@
       </section>
       <aside>
         <lf-carousel
-          :images="aboutImages"
+          :images="galleryAbout"
           full-image
           class="mb-4"
         ></lf-carousel>
@@ -64,14 +64,3 @@
     <lf-widgets hide-rooms hide-features></lf-widgets>
   </lf-content>
 </template>
-
-<script setup lang="ts">
-const aboutImages = [
-  {
-    img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Little-Forest-Main-House.jpg',
-  },
-  {
-    img: 'https://littleforestguesthouse.co.za/wp-content/uploads/2016/01/Butterflies.jpg',
-  },
-]
-</script>
