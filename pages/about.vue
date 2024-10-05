@@ -40,7 +40,7 @@
       <h3 class="mb-2 mt-2">Our Rooms</h3>
       <lf-rooms-list is-thumbnail-view></lf-rooms-list>
     </div>
-    <div class="mt-8 md:grid md:grid-cols-2">
+    <div class="mt-8 md:grid md:grid-cols-2 md:gap-4">
       <section class="mb-8">
         <p>
           Due to the privacy of the suites, some choose it as the perfect

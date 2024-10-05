@@ -1,5 +1,5 @@
 <template>
-  <ul class="grid md:grid-cols-2">
+  <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
     <li v-for="room in rooms" class="pb-2">
       <u-link
         class="text-lg"
