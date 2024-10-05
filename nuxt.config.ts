@@ -3,10 +3,14 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   modules: ['@nuxt/ui'],
+
   imports: {
     dirs: ['./constants/**', './types/**', './utils/**'],
   },
+
   ui: {
     icons: ['ion'],
   },
+
+  compatibilityDate: '2024-10-05',
 })

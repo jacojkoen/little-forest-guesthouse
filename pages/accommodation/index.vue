@@ -31,6 +31,5 @@ const roomGallery = computed(() => {
         <lf-rooms-list></lf-rooms-list>
       </UCard>
     </div>
-    <lf-widgets hide-rooms hide-rates></lf-widgets>
   </lf-content>
 </template>
