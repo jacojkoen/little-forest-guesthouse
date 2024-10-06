@@ -30,6 +30,7 @@
         />
         <UVerticalNavigation
           :links="pageNavigation"
+          class="border-b border-gray-200 dark:border-gray-800"
         />
       </USlideover>
       <UHorizontalNavigation
@@ -46,12 +47,12 @@
     <u-container class="mb-2">
       <UHorizontalNavigation
         :links="pageNavigation"
-        class="md:visible hidden lg:block"
+        class="md:visible border-b border-gray-200 dark:border-gray-800 hidden lg:block"
       />
     </u-container>
     <UVerticalNavigation
       :links="pageNavigation"
-      class="mx-4 2xl:hidden xl:hidden lg:hidden md:hidden sm:visible mb-6"
+      class="border-b border-gray-200 dark:border-gray-800 mx-4 2xl:hidden xl:hidden lg:hidden md:hidden sm:visible mb-6"
     />
     <div class="footer-area sm:py-2">
       <UContainer>
@@ -94,6 +95,18 @@ watch(
 </script>
 
 <style lang="scss">
+.header-area {
+  // // position: fixed;
+  // // width: 100%;
+  // // top: 0;
+  // // z-index: 999;
+  // // height: 3rem;
+  // background: rgba(0, 0, 0, 0.8);
+  // transition: all 0.25s ease-in;
+  // &:hover {
+  //   background: rgba(0, 0, 0, 1);
+  // }
+}
 .page-area {
   padding-bottom: 1rem;
 }
@@ -108,7 +121,7 @@ watch(
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 50px);
 }
 a {
   color: #1fa67a;
