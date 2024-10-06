@@ -12,5 +12,20 @@ export default defineNuxtConfig({
     icons: ['ion'],
   },
 
+  vite
+  : {
+      css
+  : {
+        preprocessorOptions
+  : {
+          scss
+  : {
+            additionalData
+  : '@use "~/assets/animation.scss" as *;'
+          }
+        }
+      }
+    },
+
   compatibilityDate: '2024-10-05',
 })

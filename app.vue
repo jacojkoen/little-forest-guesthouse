@@ -28,9 +28,7 @@
           variant="ghost"
           @click="isOpen = false"
         />
-        <UVerticalNavigation
-          :links="pageNavigation"
-        />
+        <UVerticalNavigation :links="pageNavigation" />
       </USlideover>
       <UHorizontalNavigation
         :links="pageNavigation"
@@ -81,16 +79,16 @@
 </template>
 
 <script setup lang="ts">
-const isOpen = ref(false)
+const isOpen = ref(false);
 
-const route = useRoute()
+const route = useRoute();
 
 watch(
   () => route.name,
   () => {
-    isOpen.value = false
-  },
-)
+    isOpen.value = false;
+  }
+);
 </script>
 
 <style lang="scss">
