@@ -17,6 +17,9 @@ export const galleryGiraffe = [
   {
     img: "/images/giraffe/Giraffe-Bathroom-2-752x450_c.jpg",
   },
+  {
+    img: "/images/giraffe/giraffe-room-outside.jpg",
+  },
 ];
 
 export const bannerGiraffe = "/images/giraffe/giraffe.png";
