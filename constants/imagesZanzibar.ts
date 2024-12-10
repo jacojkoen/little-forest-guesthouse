@@ -1,19 +1,19 @@
 export const galleryZanzibar = [
   {
-    img: "/2016/01/Little-Forest-98.jpg",
+    img: "/images/zanzibar/zanzibar-1.jpg",
   },
   {
-    img: "/2016/01/Little-Forest-105.jpg",
+    img: "/images/zanzibar/zanzibar-2.jpg",
   },
   {
-    img: "/2016/01/Little-Forest-108.jpg",
+    img: "/images/zanzibar/zanzibar-3.jpg",
   },
   {
-    img: "/2016/01/Little-Forest-109.jpg",
+    img: "/images/zanzibar/zanzibar-4.jpg",
   },
   {
-    img: "/2016/01/Little-Forest-111.jpg",
+    img: "/images/zanzibar/zanzibar-5.jpg",
   },
 ];
 
-export const bannerZanzibar = "/2016/01/Zanzibar-Garden-Suite.jpg";
+export const bannerZanzibar = "/images/zanzibar/Zanzibar-Garden-Suite.jpg";
