@@ -109,10 +109,19 @@ watch(
   min-height: calc(100vh - 70px);
 }
 a {
-  color: #1fa67a;
+  color: rgb(var(--color-primary-500));
   transition: all 0.25s ease-in;
   &:hover {
-    color: #2ce2a5;
+    color: rgb(var(--color-primary-600));
+  }
+}
+.dark {
+  a {
+    color: rgb(var(--color-primary-300));
+    transition: all 0.25s ease-in;
+    &:hover {
+      color: rgb(var(--color-primary-400));
+    }
   }
 }
 p {

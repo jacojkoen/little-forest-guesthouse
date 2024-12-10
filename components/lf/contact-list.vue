@@ -29,6 +29,6 @@
 </template>
 <script setup lang="ts">
 defineProps<{
-  isExpanded?: boolean
-}>()
+  isExpanded?: boolean;
+}>();
 </script>

@@ -6,7 +6,7 @@
     >
       <div class="md:h-12">
         <h3 class="text-lg">
-          <u-link :to="room.link" class="text-primary"
+          <u-link :to="room.link"
             >{{ room.name }}
             <lf-icon name="i-ion-leaf-outline" class="ml-2"></lf-icon>
           </u-link>
@@ -78,23 +78,23 @@
 </template>
 
 <script setup lang="ts">
-import type { IRoom } from '~/types/IRoom'
+import type { IRoom } from "~/types/IRoom";
 
 const props = defineProps<{
-  room: IRoom
-  hideGallery?: boolean
-  hideBanner?: boolean
-  hideLink?: boolean
-  hideFeatures?: boolean
-  showHeaderBook?: boolean
-  isPage?: boolean
-}>()
+  room: IRoom;
+  hideGallery?: boolean;
+  hideBanner?: boolean;
+  hideLink?: boolean;
+  hideFeatures?: boolean;
+  showHeaderBook?: boolean;
+  isPage?: boolean;
+}>();
 
-const containerStyles = 'mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mt-4'
+const containerStyles = "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mt-4";
 
 const style = computed(() =>
   props.isPage
-    ? ''
-    : 'display-area rounded-lg divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900',
-)
+    ? ""
+    : "display-area rounded-lg divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900"
+);
 </script>

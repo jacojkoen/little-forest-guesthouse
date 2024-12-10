@@ -23,11 +23,11 @@ const route = useRoute();
       <lf-widgets hide-rates hide-rooms></lf-widgets>
     </u-container>
     <div
-      class="p-2 flex justify-between items-center 2xl:hidden xl:hidden lg:hidden md:hidden sm:visible room-footer border-t border-gray-200 dark:border-gray-800"
+      class="bg-primary-100 dark:bg-gray-800 p-2 flex justify-between items-center 2xl:hidden xl:hidden lg:hidden md:hidden sm:visible room-footer border-t border-gray-200 dark:border-gray-800"
     >
       <UTooltip :text="`Sleeps 1 to ${2} persons`">
         <lf-icon name="i-ion-person" class="mr-2"></lf-icon>
-        1 - {{ 2 }}
+        1 - {{ rooms[route.path.replace("/accommodation/", "")]?.capacity }}
       </UTooltip>
 
       <lf-book-btn class="ml-2"></lf-book-btn>
@@ -43,7 +43,6 @@ const route = useRoute();
   bottom: 0;
   left: 0;
   width: 100vw;
-  background: white;
   z-index: 9999;
 }
 </style>

@@ -1,33 +1,33 @@
 <script setup lang="ts">
 const props = defineProps<{
-  images: IGalleryItem[]
-  fullImage?: boolean
-  autoPlay?: boolean
-}>()
+  images: IGalleryItem[];
+  fullImage?: boolean;
+  autoPlay?: boolean;
+}>();
 
-const carouselRef = ref()
+const carouselRef = ref();
 
-const fullScreenMode = ref(false)
+const fullScreenMode = ref(false);
 
 const imageSpecs = computed(() => {
   return fullScreenMode.value || props.fullImage
-    ? 'basis-full'
-    : 'basis-full md:basis-1/2 lg:basis-1/3'
-})
+    ? "basis-full"
+    : "basis-full md:basis-1/2 lg:basis-1/3";
+});
 
 onMounted(() => {
   if (props.autoPlay) {
     setInterval(() => {
-      if (!carouselRef.value) return
+      if (!carouselRef.value) return;
 
       if (carouselRef.value.page === carouselRef.value.pages) {
-        return carouselRef.value.select(0)
+        return carouselRef.value.select(0);
       }
 
-      carouselRef.value.next()
-    }, 4000)
+      carouselRef.value.next();
+    }, 4000);
   }
-})
+});
 </script>
 
 <template>
@@ -92,6 +92,7 @@ onMounted(() => {
 }
 .image-area {
   cursor: pointer;
+  margin: 0 auto;
 }
 .close-btn {
   position: fixed;
