@@ -15,7 +15,7 @@ const roomGallery = computed(() => {
 <template>
   <lf-page>
     <lf-content title="Accommodation">
-      <div class="grid md:grid-cols-2 md:grid-rows-1 gap-4">
+      <div class="lf-rooms-list grid md:grid-cols-2 md:grid-rows-1 gap-4">
         <lf-room v-for="room in rooms" :room="room" hide-banner></lf-room>
         <UCard>
           <template #header>

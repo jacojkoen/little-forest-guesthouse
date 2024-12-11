@@ -1,5 +1,5 @@
 <template>
-  <div :class="style">
+  <div class="lf-room-item" :class="style">
     <div
       class="display-header py-4 px-6"
       :class="isPage ? containerStyles : ''"
@@ -98,3 +98,28 @@ const style = computed(() =>
     : "display-area rounded-lg divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900"
 );
 </script>
+
+<style lang="scss" scoped>
+@media (min-width: 1281px) {
+  .lf-room-item {
+    :deep(.image-area) {
+      img {
+        height: 350px;
+        width: 600px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .lf-room-item {
+    :deep(.image-area) {
+      img {
+        height: 290px;
+        width: calc(50vw - 35px);
+        object-fit: cover;
+      }
+    }
+  }
+}
+</style>

@@ -29,14 +29,20 @@ const route = useRoute();
         <lf-icon name="i-ion-person" class="mr-2"></lf-icon>
         1 - {{ rooms[route.path.replace("/accommodation/", "")]?.capacity }}
       </UTooltip>
-
       <lf-book-btn class="ml-2"></lf-book-btn>
     </div>
   </lf-page>
 </template>
-<style scope>
+<style lang="scss" scoped>
 .page-room {
   margin-top: -1rem;
+}
+:deep(.image-area) {
+  img {
+    height: 350px;
+    width: 600px;
+    object-fit: cover;
+  }
 }
 .room-footer {
   position: fixed;
