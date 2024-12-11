@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="display-image" :class="showHeaderBook ? 'mt-3' : ''">
+    <div :class="showHeaderBook ? 'mt-3' : ''">
       <u-link v-if="!hideLink && !hideBanner" :to="room.link">
         <img width="100%" :src="room.banner" :alt="room.name" />
       </u-link>

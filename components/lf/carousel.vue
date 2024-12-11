@@ -53,7 +53,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .slide-text {
   position: absolute;
   z-index: 999;
@@ -85,6 +85,13 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  .image-area {
+    img {
+      cursor: auto;
+      width: 100vw !important;
+      height: 100% !important;
+    }
+  }
 }
 .image-area {
   cursor: pointer;

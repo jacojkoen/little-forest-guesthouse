@@ -3,13 +3,13 @@ const { rooms } = useRooms();
 </script>
 
 <template>
-  <lf-page>
+  <lf-page class="lf-home">
     <div class="gallery">
       <lf-carousel :images="galleryHome"></lf-carousel>
     </div>
     <lf-intro-content></lf-intro-content>
     <u-container>
-      <div class="grid md:grid-cols-2 md:grid-rows-1 gap-4 mt-4">
+      <div class="lf-home-rooms grid md:grid-cols-2 md:grid-rows-1 gap-4 mt-4">
         <lf-room
           v-for="room in rooms"
           class="mt-4"
@@ -34,8 +34,6 @@ const { rooms } = useRooms();
           </p>
           <h3 class="text-lg mb-2 mt-4">Our rates</h3>
           <lf-rates-list></lf-rates-list>
-          <h3 class="text-lg mb-2 mt-4">Our rooms</h3>
-          <lf-rooms-list is-thumbnail-view></lf-rooms-list>
         </UCard>
       </div>
       <section class="mt-8">
@@ -44,3 +42,28 @@ const { rooms } = useRooms();
     </u-container>
   </lf-page>
 </template>
+
+<style lang="scss" scoped>
+@media (min-width: 1281px) {
+  .lf-home-rooms {
+    :deep(.image-area) {
+      img {
+        height: 350px;
+        width: 600px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .lf-home-rooms {
+    :deep(.image-area) {
+      img {
+        height: 290px;
+        width: calc(50vw - 35px);
+        object-fit: cover;
+      }
+    }
+  }
+}
+</style>
