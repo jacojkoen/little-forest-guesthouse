@@ -18,5 +18,6 @@ const features = [
   { text: "Pet Friendly", icon: "i-ion-paw" },
   { text: "Laundry facilities", icon: "i-mdi-washing-machine" },
   { text: "Housekeeping", icon: "i-mdi-broom" },
+  { text: "Bird watching", icon: "i-mdi-bird" },
 ];
 </script>
