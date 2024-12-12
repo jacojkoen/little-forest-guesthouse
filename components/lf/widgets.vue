@@ -22,7 +22,7 @@
       </template>
 
       <lf-rates-list></lf-rates-list>
-      <lf-book-btn></lf-book-btn>
+      <lf-book-btn class="mt-4"></lf-book-btn>
     </UCard>
 
     <UCard v-if="!hideContact">
@@ -35,9 +35,9 @@
 </template>
 <script setup lang="ts">
 defineProps<{
-  hideFeatures?: boolean
-  hideRooms?: boolean
-  hideRates?: boolean
-  hideContact?: boolean
-}>()
+  hideFeatures?: boolean;
+  hideRooms?: boolean;
+  hideRates?: boolean;
+  hideContact?: boolean;
+}>();
 </script>

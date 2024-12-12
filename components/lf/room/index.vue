@@ -24,7 +24,11 @@
                 1 - {{ room.capacity }}
               </UTooltip>
             </div>
-            <lf-book-btn v-if="showHeaderBook" class="ml-2"></lf-book-btn>
+            <lf-book-btn
+              v-if="showHeaderBook"
+              is-small
+              class="ml-2"
+            ></lf-book-btn>
           </div>
         </div>
       </div>
@@ -64,6 +68,7 @@
       <div class="flex justify-between items-center h8">
         <UButton
           v-if="!hideLink"
+          class="h-12"
           color="primary"
           variant="solid"
           :to="room.link"

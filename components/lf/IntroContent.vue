@@ -17,7 +17,7 @@
           ></u-link>
         </p>
       </div>
-      <lf-book-btn class="h-12 mt-4 mr-6"></lf-book-btn>
+      <lf-book-btn class="mt-4 mr-6"></lf-book-btn>
     </u-container>
   </section>
 </template>

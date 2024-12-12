@@ -24,11 +24,6 @@
             Visitors always marvel at the natural rocks, trees and abundance of
             birds that fill the property.
           </p>
-          <p>
-            Entering the property feels like stepping away from the city, which
-            is why many visitors use it as a perfect weekend or holiday
-            breakaway.
-          </p>
         </section>
         <aside>
           <lf-carousel
@@ -36,6 +31,11 @@
             full-image
             class="mb-4"
           ></lf-carousel>
+          <p>
+            Entering the property feels like stepping away from the city, which
+            is why many visitors use it as a perfect weekend or holiday
+            breakaway.
+          </p>
         </aside>
       </div>
       <div>
