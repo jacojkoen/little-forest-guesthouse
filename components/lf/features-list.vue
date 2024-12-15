@@ -15,7 +15,7 @@ const features = [
   { text: "Transport services", icon: "i-ion-bus" },
   { text: "Free parking", icon: "i-ion-car" },
   { text: "Outdoor pool (Pool Cottage)", icon: "i-ion-water" },
-  { text: "Pet Friendly", icon: "i-ion-paw" },
+  { text: "Pet Friendly (On request)", icon: "i-ion-paw" },
   { text: "Laundry facilities", icon: "i-mdi-washing-machine" },
   { text: "Housekeeping", icon: "i-mdi-broom" },
   { text: "Bird watching", icon: "i-mdi-bird" },
